@@ -41,3 +41,15 @@ p {
     font-size: 20px;
   }
 }
+
+section {
+  padding-top: 20px;
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 100px;
+  }
+}
