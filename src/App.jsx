@@ -1,4 +1,4 @@
-import Contents, { ALIGN, THEME } from "./components/Content";
+import Contents, { ALIGN, THEME } from "./components/Contents";
 
 const athletesContent = {
   title: 'ATHLETES',
@@ -8,11 +8,11 @@ const athletesContent = {
   }, {
     title: 'COLLABORATION',
     content: 'Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.',
-    bgColor: '#F5F4F9',
+    bgColor: 'bg-purple-light',
   }, {
     title: 'GROWTH',
     content: 'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc',
-    bgColor: '#5E3DB3',
+    bgColor: 'bg-purple-medium',
     theme: THEME.LIGHT,
   }],
 }
@@ -24,11 +24,11 @@ const playersContent = {
   }, {
     title: 'COLLABORATION',
     content: 'Work with recruiter to increase your chances of finding talented athlete.',
-    bgColor: '#F5F4F9',
+    bgColor: 'bg-purple-light',
   }, {
     title: 'GROWTH',
     content: 'Save your time, recruit proper athlets for your team.',
-    bgColor: '#090C35',
+    bgColor: 'bg-purple-dark',
     theme: THEME.LIGHT,
   }],
 }
@@ -36,7 +36,7 @@ const playersContent = {
 export default function App() {
   return (
     <div>
-      <section>
+      <section className="relative">
         <Topic
           topic={athletesContent.title}
           align={ALIGN.RIGHT} />
@@ -45,7 +45,7 @@ export default function App() {
           contents={athletesContent.subContent}
           align={ALIGN.RIGHT} />
       </section>
-      <section>
+      <section className="relative">
         <Topic
           topic={playersContent.title}
           align={ALIGN.LEFT} />
@@ -61,8 +61,8 @@ export default function App() {
 function Topic({ topic, align }) {
   return (
     <div
-      className={`flex flex-col ${align === ALIGN.RIGHT ? 'items-end' : 'items-start'}`}>
-      <h1 className="mb-[10px] w-full tablet:w-3/5 desktop:w-1/2 px-5 tablet:px-[30px] desktop:px-[60px]">
+      className="max-w-screen-2xl w-full mx-auto">
+      <h1 className={`uppercase mb-[10px] w-full tablet:w-3/5 desktop:w-1/2 px-5 tablet:px-[30px] desktop:px-[60px] ${align === ALIGN.RIGHT ? 'ml-auto' : 'mr-auto'}`}>
         {topic}
       </h1>
     </div>
