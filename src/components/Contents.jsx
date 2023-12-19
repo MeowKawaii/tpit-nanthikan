@@ -1,7 +1,8 @@
 import Slider from "react-slick"
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import NumberIcon from "./NumberIcon"
 
 export const THEME = {
   LIGHT: 'LIGHT',
@@ -29,13 +30,16 @@ const settings = {
 
 export default function Contents({ topic, contents, align }) {
 
-  const renderContent = () => contents.map(({ title, content, bgColor, theme }) => (
+  const renderContent = () => contents.map(({ title, content, bgColor, theme, numberClassname }, i) => (
     <div
       key={`${topic}-${title}`}
       className={`${bgColor} min-h-[230px] tablet:min-h-0`}>
       <div className="max-w-screen-2xl w-full mx-auto">
         <div className={`w-full tablet:w-3/5 desktop:w-1/2 p-5 tablet:p-[30px] desktop:p-[60px] ${align === ALIGN.RIGHT ? 'ml-auto' : 'mr-auto'}`}>
-          <h2 className="uppercase mb-[10px] tablet:mb-5">{title}</h2>
+          <div className="flex">
+            <NumberIcon number={i + 1} theme={theme} className={numberClassname} />
+            <h2 className="uppercase mb-[10px] tablet:mb-5">{title}</h2>
+          </div>
           <p
             className={theme === THEME.LIGHT ? 'text-white' : ''}
             style={{ maxWidth: 717 }}>
