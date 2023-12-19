@@ -30,6 +30,7 @@ const playersContent = {
     content: 'Save your time, recruit proper athlets for your team.',
     bgColor: 'bg-purple-dark',
     theme: THEME.LIGHT,
+    numberClassname: 'text-[#8765DD]'
   }],
 }
 
@@ -40,6 +41,14 @@ export default function App() {
         <Topic
           topic={athletesContent.title}
           align={ALIGN.RIGHT} />
+        <div className="relative tablet:absolute inset-0 overflow-hidden px-[9px] tablet:px-0 -mb-[55px] z-10">
+          {/* <img
+            src="rugby.svg"
+            className="w-full" />
+          <img
+            src="rugby_with_line.svg"
+            className="w-full" /> */}
+        </div>
         <Contents
           topic={athletesContent.title}
           contents={athletesContent.subContent}
@@ -49,6 +58,11 @@ export default function App() {
         <Topic
           topic={playersContent.title}
           align={ALIGN.LEFT} />
+        <div className="relative tablet:absolute inset-0 overflow-hidden px-[9px] tablet:px-0 -mb-[55px] z-10">
+          <img
+            src="basket_ball.svg"
+            className="max-w-screen-lg w-[302px] tablet:w-[690px] desktop:w-3/5 h-auto mr-auto tablet:mr-0 ml-auto tablet:ml-[40%] desktop:ml-[40%]" />
+        </div>
         <Contents
           topic={playersContent.title}
           contents={playersContent.subContent}
