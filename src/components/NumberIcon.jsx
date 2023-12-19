@@ -6,12 +6,12 @@ export default function NumberIcon({ number, theme, className }) {
   return (
     <div className={`mt-[6px] mr-[10px] ${className}`}>
       <p
-        className="text-[14px] tablet:text-[18px] mb-1"
+        className="text-[14px] tablet:text-[18px] tablet:mb-1"
         style={{ letterSpacing: 1.5 }}>
         {formatNumber}
       </p>
       <div
-        className={`w-full rounded-full ${theme === THEME.LIGHT ? 'bg-white' : 'bg-[#603EBE]'}`}
+        className={`w-full rounded-full ${theme === THEME.LIGHT ? 'bg-[#603EBE] tablet:bg-white' : 'bg-[#603EBE]'}`}
         style={{ height: 5 }} />
     </div>
   )

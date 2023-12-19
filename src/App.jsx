@@ -5,6 +5,7 @@ const athletesContent = {
   subContent: [{
     title: 'CONNECTION',
     content: 'Connect with coaches directly, you can ping coaches to view profile.',
+    bgColor: 'bg-purple-light tablet:bg-white'
   }, {
     title: 'COLLABORATION',
     content: 'Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.',
@@ -12,7 +13,7 @@ const athletesContent = {
   }, {
     title: 'GROWTH',
     content: 'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc',
-    bgColor: 'bg-purple-medium',
+    bgColor: 'bg-purple-light tablet:bg-purple-medium',
     theme: THEME.LIGHT,
   }],
 }
@@ -21,6 +22,7 @@ const playersContent = {
   subContent: [{
     title: 'CONNECTION',
     content: 'Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.',
+    bgColor: 'bg-purple-light tablet:bg-white'
   }, {
     title: 'COLLABORATION',
     content: 'Work with recruiter to increase your chances of finding talented athlete.',
@@ -28,7 +30,7 @@ const playersContent = {
   }, {
     title: 'GROWTH',
     content: 'Save your time, recruit proper athlets for your team.',
-    bgColor: 'bg-purple-dark',
+    bgColor: 'bg-purple-light tablet:bg-purple-dark',
     theme: THEME.LIGHT,
     numberClassname: 'text-[#8765DD]'
   }],
@@ -50,7 +52,7 @@ export default function App() {
           <img
             src="rugby_with_line.svg"
             className="w-[218px] tablet:w-4/6 tablet:mt-[70px] mx-auto xl:-ml-[10%] tablet:-ml-[20%] tablet:mr-0 desktop:hidden"
-            style={{maxWidth: 655}} />
+            style={{ maxWidth: 655 }} />
         </div>
         <Contents
           topic={athletesContent.title}
