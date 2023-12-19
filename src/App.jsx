@@ -37,7 +37,7 @@ const playersContent = {
 
 export default function App() {
   return (
-    <Layout>
+    <div>
       <section>
         <Content
           content={athletesContent}
@@ -48,6 +48,6 @@ export default function App() {
           content={playersContent}
           align={ALIGN.LEFT} />
       </section>
-    </Layout>
+    </div>
   )
 }
