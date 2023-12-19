@@ -1,7 +1,32 @@
+.slick-dots li {
+  background-color: #D8D8D8 !important;
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 100%;
+}
+
+.slick-dots li button {
+  background-color: #D8D8D8 !important;
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 100%;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #5C3CAF !important;
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 100%;
+}
+
 .slick-dots li button:before {
-  color: #D8D8D8 !important;
+  content: '' !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #5C3CAF !important;
+  content: '' !important;
+  width: 0 !important;
+  height: 0 !important;
 }
