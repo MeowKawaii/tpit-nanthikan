@@ -41,13 +41,16 @@ export default function App() {
         <Topic
           topic={athletesContent.title}
           align={ALIGN.RIGHT} />
-        <div className="relative tablet:absolute inset-0 overflow-hidden px-[9px] tablet:px-0 -mb-[55px] z-10">
-          {/* <img
-            src="rugby.svg"
-            className="w-full" />
+        <div className="relative tablet:absolute inset-0 px-[9px] tablet:px-0 -mb-[55px] tablet:mb-0 z-10">
+          <div className="w-1/2 hidden desktop:flex justify-end mt-[50px]">
+            <img
+              src="rugby.svg"
+              className="w-4/6 mr-[100px]" />
+          </div>
           <img
             src="rugby_with_line.svg"
-            className="w-full" /> */}
+            className="w-[218px] tablet:w-4/6 tablet:mt-[70px] mx-auto xl:-ml-[10%] tablet:-ml-[20%] tablet:mr-0 desktop:hidden"
+            style={{maxWidth: 655}} />
         </div>
         <Contents
           topic={athletesContent.title}
@@ -58,7 +61,7 @@ export default function App() {
         <Topic
           topic={playersContent.title}
           align={ALIGN.LEFT} />
-        <div className="relative tablet:absolute inset-0 overflow-hidden px-[9px] tablet:px-0 -mb-[55px] z-10">
+        <div className="relative tablet:absolute inset-0 overflow-hidden px-[9px] tablet:px-0 -mb-[55px] tablet:mb-0 z-10">
           <img
             src="basket_ball.svg"
             className="max-w-screen-lg w-[302px] tablet:w-[690px] desktop:w-3/5 h-auto mr-auto tablet:mr-0 ml-auto tablet:ml-[40%] desktop:ml-[40%]" />
