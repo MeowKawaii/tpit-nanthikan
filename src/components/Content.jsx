@@ -8,12 +8,11 @@ export const ALIGN = {
   RIGHT: 'RIGHT'
 }
 
-export default function Contents({ content, align }) {
-  const { topic, subContent } = content
+export default function Contents({ topic, contents, align }) {
 
   return (
     <div>
-      {subContent.map(({ title, content, bgColor, theme }) => (
+      {contents.map(({ title, content, bgColor, theme }) => (
         <div
           key={`${topic}-${title}`}
           className={`flex flex-col ${align === ALIGN.RIGHT ? 'items-end' : 'items-start'}`} style={{ backgroundColor: bgColor }}>
@@ -24,11 +23,5 @@ export default function Contents({ content, align }) {
         </div>
       ))}
     </div>
-  )
-}
-
-function Topic({ title }) {
-  return (
-    <h1 className="mb-[10px] px-5 tablet:px-[30px] desktop:px-[60px]">{title}</h1>
   )
 }

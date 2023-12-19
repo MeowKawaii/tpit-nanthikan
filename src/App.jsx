@@ -1,9 +1,8 @@
-import Content, { ALIGN, THEME } from "./components/Content";
-import Layout from "./components/Layout";
+import Contents, { ALIGN, THEME } from "./components/Content";
 
 const athletesContent = {
-  topic: 'ATHLETES',
-  supContent: [{
+  title: 'ATHLETES',
+  subContent: [{
     title: 'CONNECTION',
     content: 'Connect with coaches directly, you can ping coaches to view profile.',
   }, {
@@ -17,10 +16,9 @@ const athletesContent = {
     theme: THEME.LIGHT,
   }],
 }
-
 const playersContent = {
-  topic: 'PLAYERS',
-  supContent: [{
+  title: 'PLAYERS',
+  subContent: [{
     title: 'CONNECTION',
     content: 'Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.',
   }, {
@@ -39,15 +37,34 @@ export default function App() {
   return (
     <div>
       <section>
-        <Content
-          content={athletesContent}
+        <Topic
+          topic={athletesContent.title}
+          align={ALIGN.RIGHT} />
+        <Contents
+          topic={athletesContent.title}
+          contents={athletesContent.subContent}
           align={ALIGN.RIGHT} />
       </section>
       <section>
-        <Content
-          content={playersContent}
+        <Topic
+          topic={playersContent.title}
+          align={ALIGN.LEFT} />
+        <Contents
+          topic={playersContent.title}
+          contents={playersContent.subContent}
           align={ALIGN.LEFT} />
       </section>
+    </div>
+  )
+}
+
+function Topic({ topic, align }) {
+  return (
+    <div
+      className={`flex flex-col ${align === ALIGN.RIGHT ? 'items-end' : 'items-start'}`}>
+      <h1 className="mb-[10px] w-full tablet:w-3/5 desktop:w-1/2 px-5 tablet:px-[30px] desktop:px-[60px]">
+        {topic}
+      </h1>
     </div>
   )
 }
